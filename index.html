@@ -3,49 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Portfolio - นายบุญฤทธิ์ วงษ์จันนา</title>
+    <!-- Bootstrap 5 CSS Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts: Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .hero-header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 60px 0 80px 0;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .card-custom {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .badge-custom {
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 20px;
+        }
+        .section-title {
+            position: relative;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 4px;
+            background: #0d6efd;
+            border-radius: 2px;
+        }
+        .qr-img {
+            max-width: 150px;
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            background: white;
+        }
+    </style>
 </head>
-<body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">IT Portfolio</a>
-        </div>
-    </nav>
-    <div class="container py-5 text-center">
-        <h1>My Portfolio</h1>
-    </div>
-</body>
-<body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">My IT Portfolio</a>
-        </div>
-    </nav>
-    <div class="container py-5 text-center">
-        <img src="1000108086.jpg" class="rounded-circle mb-3 shadow" width="160" height="160" alt="รูปโปรไฟล์" style="object-fit: cover;">
-        <h2 class="fw-bold">นาย บุญฤทธิ์ วงษ์จันนา</h2>
-        <p class="fs-5 text-secondary mb-1">รหัสนิสิต: 67310075</p>
-        <p class="fs-5 text-secondary">สาขาวิชา: ITDS</p>
+<body>
 
-        <div class="mt-3">
-            <a href="https://github.com/67310075-sudo" target="_blank" class="btn btn-dark">GitHub Profile</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-code me-2 text-primary"></i>IT Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับฉัน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">ทักษะ IT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">รายวิชาเรียน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">ผลงาน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">ติดต่อ / QR Code</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="container pb-5">
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-primary">ความสามารถด้าน IT</h4>
-                        <ul class="list-group list-group-flush mt-3">
-                            <li class="list-group-item">HTML / JavaScript</li>
-                            <li class="list-group-item">Basic JavaScript / Programming / AI Trainer</li>
-                        </ul>
+    </nav>
+
+    <!-- Hero Header / Profile Section -->
+    <header id="about" class="hero-header text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Profile Image -->
+                    <div class="mb-4">
+                        <img src="profile.jpg" onerror="this.src='https://via.placeholder.com/170?text=Profile+Image'" class="rounded-circle profile-img" alt="นาย บุญฤทธิ์ วงษ์จันนา">
+                    </div>
+                    <h1 class="fw-bold mb-2">นาย บุญฤทธิ์ วงษ์จันนา</h1>
+                    <p class="fs-5 text-light opacity-75 mb-3">
+                        <span class="badge bg-primary badge-custom me-2"><i class="fa-solid fa-id-card me-1"></i> รหัสนิสิต: 67310075</span>
+                        <span class="badge bg-info text-dark badge-custom"><i class="fa-solid fa-graduation-cap me-1"></i> สาขาวิชา: ITDS</span>
+                    </p>
+                    <p class="text-light opacity-75 lead mx-auto mb-4" style="max-width: 600px;">
+                        นิสิตสาขาวิชาเทคโนโลยีสารสนเทศ มีความสนใจด้านการพัฒนาเว็บไซต์ Programming และ AI Training
+                    </p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="https://github.com/67310075-sudo" target="_blank" class="btn btn-outline-light rounded-pill px-4">
+                            <i class="fa-brands fa-github me-2"></i>GitHub Profile
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="btn btn-primary rounded-pill px-4">
+                            <i class="fa-brands fa-facebook me-2"></i>Facebook
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5" style="margin-top: -30px;">
+        <div class="row g-4">
+
+            <!-- IT Skills Section -->
+            <section id="skills" class="col-12 col-md-6">
+                <div class="card card-custom p-4 h-100">
+                    <h3 class="section-title text-dark"><i class="fa-solid fa-laptop-code text-primary me-2"></i>ความสามารถด้าน IT</h3>
+                    <div class="mt-2">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-medium">HTML5 & CSS3</span>
+                                <span class="text-primary fw-bold">85%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-primary" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-medium">JavaScript & Web Programming</span>
+                                <span class="text-primary fw-bold">75%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-primary" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-medium">Git & GitHub Version Control</span>
+                                <span class="text-primary fw-bold">80%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-primary" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-medium">AI Trainer / Prompt Engineering</span>
+                                <span class="text-primary fw-bold">90%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-primary" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses / Subjects Section -->
+            <section id="courses" class="col-12 col-md-6">
+                <div class="card card-custom p-4 h-100">
+                    <h3 class="section-title text-dark"><i class="fa-solid fa-book-open text-success me-2"></i>รายวิชาที่เรียน</h3>
+                    <ul class="list-group list-group-flush mt-1">
+                        <li class="list-group-item d-flex align-items-center py-3 bg-transparent">
+                            <i class="fa-solid fa-circle-check text-success me-3 fs-5"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">การพัฒนาเว็บแอปพลิเคชัน (Web Application)</h6>
+                                <small class="text-muted">เรียนรู้ HTML, CSS, JavaScript, Bootstrap และ GitHub Pages</small>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center py-3 bg-transparent">
+                            <i class="fa-solid fa-circle-check text-success me-3 fs-5"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">ระบบจัดการฐานข้อมูล (Database Management)</h6>
+                                <small class="text-muted">การออกแบบฐานข้อมูล และการใช้งาน SQL ภาษาจัดการข้อมูล</small>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center py-3 bg-transparent">
+                            <i class="fa-solid fa-circle-check text-success me-3 fs-5"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">โครงสร้างข้อมูลและอัลกอริทึม (Data Structures)</h6>
+                                <small class="text-muted">การคิดเชิงตรรกะ และการเขียนโปรแกรมเพื่อการแก้ปัญหา</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="col-12 col-lg-8">
+                <div class="card card-custom p-4 h-100">
+                    <h3 class="section-title text-dark"><i class="fa-solid fa-diagram-project text-warning me-2"></i>ผลงาน (Projects)</h3>
+                    <div class="row g-3 mt-1">
+                        <div class="col-md-6">
+                            <div class="border rounded-3 p-3 bg-light h-100">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-globe text-primary fs-4 me-2"></i>
+                                    <h5 class="mb-0 fw-bold fs-6">Personal Portfolio Website</h5>
+                                </div>
+                                <p class="text-muted small mb-2">ออกแบบและพัฒนาเว็บไซต์แนะนำตัวส่วนตัว รองรับ Responsive Design ด้วย Bootstrap 5</p>
+                                <span class="badge bg-secondary">HTML</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                                <span class="badge bg-secondary">GitHub Pages</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="border rounded-3 p-3 bg-light h-100">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-robot text-danger fs-4 me-2"></i>
+                                    <h5 class="mb-0 fw-bold fs-6">AI Training & Prompting</h5>
+                                </div>
+                                <p class="text-muted small mb-2">พัฒนาและวิเคราะห์ข้อมูลเพื่อฝึกฝนโมเดลปัญญาประดิษฐ์ (AI Model Training)</p>
+                                <span class="badge bg-secondary">AI Trainer</span>
+                                <span class="badge bg-secondary">Prompting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QR Code & Contact Section -->
+            <section id="contact" class="col-12 col-lg-4">
+                <div class="card card-custom p-4 text-center h-100 d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="fw-bold mb-3"><i class="fa-solid fa-qrcode text-dark me-2"></i>Scan GitHub Profile</h4>
+                    <img src="qrcode.png" onerror="this.src='https://via.placeholder.com/150?text=QR+Code'" class="qr-img mb-3 shadow-sm" alt="QR Code">
+                    <p class="small text-muted mb-2">สแกนเพื่อเข้าชม GitHub Repository และซอร์สโค้ดทั้งหมด</p>
+                    <a href="https://github.com/67310075-sudo/it-portfolio" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill w-100">
+                        <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>ไปที่ GitHub Repo
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 text-center mt-5">
+        <div class="container">
+            <p class="mb-0 small opacity-75">&copy; 2026 นายบุญฤทธิ์ วงษ์จันนา - All Rights Reserved | IT Portfolio Lab 12</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
